@@ -11,13 +11,34 @@
   <header>
     <h1>🌐 PWA Hub</h1>
     <nav>
-      <button onclick="loadYoutube()">YouTube</button>
-      <button onclick="loadCNN()">CNN</button>
+      <button onclick="showSection('youtube')">YouTube Search</button>
+      <button onclick="showSection('cnn')">CNN</button>
+      <button onclick="showSection('myspace')">MySpace</button>
     </nav>
   </header>
 
-  <main id="content">
-    <p>Selecione uma fonte de feed para começar.</p>
+  <main>
+    <!-- YouTube Search -->
+    <section id="youtube" class="tab-section">
+      <h2>Pesquisar canais do YouTube</h2>
+      <input type="text" id="searchInput" placeholder="Digite o nome do canal...">
+      <button onclick="searchYoutubeChannel()">Buscar</button>
+      <div id="youtubeResults"></div>
+    </section>
+
+    <!-- CNN -->
+    <section id="cnn" class="tab-section" style="display:none;">
+      <h2>CNN News</h2>
+      <button onclick="loadCNN()">Carregar Notícias</button>
+      <div id="cnnFeed"></div>
+    </section>
+
+    <!-- MySpace -->
+    <section id="myspace" class="tab-section" style="display:none;">
+      <h2>🪐 MySpace</h2>
+      <p>Seus feeds personalizados de canais do YouTube:</p>
+      <div id="myspaceFeed"></div>
+    </section>
   </main>
 
   <script src="app.js"></script>
