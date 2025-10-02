@@ -2,8 +2,17 @@ const youtubeApiKey = "AIzaSyBdfDAf_Z5QZ5W8ItsiSeCTRi0OMX0vLqg";
 
 // Abas de navegação
 function showSection(sectionId) {
-  document.querySelectorAll(".tab-section").forEach(sec => sec.style.display = "none");
-  document.getElementById(sectionId).style.display = "block";
+  // Remove classe active de todas as seções
+  document.querySelectorAll(".tab-section").forEach(sec => sec.classList.remove("active"));
+  
+  // Remove active dos botões
+  document.querySelectorAll("nav button").forEach(btn => btn.classList.remove("active"));
+
+  // Ativa a seção clicada
+  document.getElementById(sectionId).classList.add("active");
+
+  // Ativa o botão clicado (usando o atributo onclick)
+  document.querySelector(`nav button[onclick="showSection('${sectionId}')"]`).classList.add("active");
 
   if (sectionId === "myspace") {
     loadMySpace();
