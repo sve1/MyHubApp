@@ -1,41 +1,23 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f4f9;
-  color: #333;
+#youtubeResults, #myspaceFeed, #cnnFeed {
+  margin-top: 15px;
 }
-
-header {
-  background: #20232a;
-  color: white;
-  padding: 10px;
-  text-align: center;
-}
-
-nav button {
-  margin: 5px;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 8px;
-  background: #61dafb;
-  cursor: pointer;
-}
-
-nav button:hover {
-  background: #21a1f1;
-}
-
-#content {
-  padding: 15px;
-}
-.feed-item {
-  background: white;
+.channel-card {
+  background: #fff;
   border-radius: 8px;
   padding: 10px;
   margin-bottom: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-.feed-item a {
-  text-decoration: none;
-  color: #333;
+.channel-card button {
+  margin-top: 5px;
+  padding: 5px 10px;
+  border: none;
+  background: #21a1f1;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
 }
+.channel-card button:hover {
+  background: #1b82c7;
+}
+
