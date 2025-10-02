@@ -1,23 +1,156 @@
-#youtubeResults, #myspaceFeed, #cnnFeed {
-  margin-top: 15px;
-}
-.channel-card {
-  background: #fff;
-  border-radius: 8px;
-  padding: 10px;
-  margin-bottom: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-.channel-card button {
-  margin-top: 5px;
-  padding: 5px 10px;
-  border: none;
-  background: #21a1f1;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.channel-card button:hover {
-  background: #1b82c7;
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, sans-serif;
 }
 
+body {
+  background: #0d1117;
+  color: #e6edf3;
+  line-height: 1.6;
+}
+
+/* Cabeçalho fixo */
+header {
+  background: #161b22;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #30363d;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #58a6ff;
+}
+
+/* Abas de navegação */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+nav button {
+  padding: 8px 16px;
+  border: none;
+  background: transparent;
+  color: #c9d1d9;
+  font-size: 0.95rem;
+  border-radius: 20px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background: #21262d;
+  color: #58a6ff;
+}
+
+nav button.active {
+  background: #58a6ff;
+  color: #0d1117;
+  font-weight: bold;
+}
+
+/* Conteúdo */
+main {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  border-left: 4px solid #58a6ff;
+  padding-left: 10px;
+}
+
+/* Cards de feed/canais */
+.channel-card,
+.feed-item {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
+  transition: 0.2s ease-in-out;
+}
+
+.channel-card:hover,
+.feed-item:hover {
+  border-color: #58a6ff;
+  transform: translateY(-2px);
+}
+
+.channel-card h3,
+.feed-item h4 {
+  margin-bottom: 8px;
+  color: #e6edf3;
+}
+
+.channel-card img,
+.feed-item img {
+  width: 100%;
+  border-radius: 8px;
+  margin: 8px 0;
+}
+
+/* Botões dentro dos cards */
+.channel-card button {
+  margin-top: 8px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #238636;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.channel-card button:hover {
+  background: #2ea043;
+}
+
+/* Inputs */
+input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+  background: #0d1117;
+  color: #e6edf3;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  background: #58a6ff;
+  color: #0d1117;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #1f6feb;
+}
+
+/* Seções escondidas */
+.tab-section {
+  display: none;
+}
+
+.tab-section.active {
+  display: block;
+}
